@@ -10,20 +10,24 @@ interface PropDefs {
   children?: object[],
 }
 
-function CommonNavbar({ logo, children}:PropDefs) {
+function CommonNavbar({ logo, children }:PropDefs) {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" sticky='top'>
       <Container>
-        <NavbarBrand><Image src={logo}></Image></NavbarBrand>
+        <NavbarBrand>
+          <Image src={logo} className="logo"></Image>
+        </NavbarBrand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            {children}
-          </Nav>
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          {children}
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
+}
+
+CommonNavbar.defaultProps = {
+  logo: 'https://cdn0.scrvt.com/4d3e519fe5939342b95c7312343779ef/c736dfe931dfb22d/0e6f79ca70bd/Logo-klinikum.svg'
 }
 
 export default CommonNavbar;
