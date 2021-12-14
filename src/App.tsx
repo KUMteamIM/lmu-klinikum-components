@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <header>
-        <CommonNavbar siteTitle="OMG">
+        <CommonNavbar>
           <Nav.Link href="hello">Hello</Nav.Link>
           <Nav.Link href="wow">Wow</Nav.Link>
         </CommonNavbar>
