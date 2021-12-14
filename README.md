@@ -1,8 +1,27 @@
 # lmu-klinikum-components
 
-React component library for shared html elements in LMU Klinikum CI
+React component library for shared html elements in LMU Klinikum CI.
 
-## Available Scripts
+## Usage
+
+Add to your package.json like so:
+
+    npm install -D KUMteamIM/lmu-klinikum-components
+    yarn add -D KUMteamIM/lmu-klinikum-components
+
+We have three JSX components available for use
+
+```html
+import CommonNavbar from "lmu-klinikum-components";
+
+<CommonNavbar />
+<CommonNavbarGrey />
+<CommonFooter />
+```
+
+See example implementation inside `App.tsx`.
+
+## Development
 
 In the project directory, you can run:
 
