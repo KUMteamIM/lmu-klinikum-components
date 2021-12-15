@@ -1,0 +1,21 @@
+body.lmu-klinikum footer {
+  background-color: grey;
+  color: white;
+  padding: 1rem;
+}
+body.lmu-klinikum footer h4 {
+  color: white;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+footer {
+  margin-top: 2rem;
+}
+body.lmu-klinikum footer a {
+  color: white;
+}
+img.logo {
+  height: 60px;
+}
