@@ -19,7 +19,7 @@ import CommonNavbar from "lmu-klinikum-components";
 <CommonFooter />
 ```
 
-See example implementation inside `App.tsx`.
+See example implementation and available properties for the components inside `App.tsx`.
 
 ## Development
 
