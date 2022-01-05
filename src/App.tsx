@@ -6,6 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import { Container } from "react-bootstrap";
 import CommonFooter from "./CommonFooter";
 import CommonNavbarGrey from "./CommonNavbarGrey";
+import CommonCookieNotice from "./CommonCookieNotice";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         </Container>
       </article>
       <CommonFooter />
+      <CommonCookieNotice expires={new Date()} />
     </div>
   );
 }
