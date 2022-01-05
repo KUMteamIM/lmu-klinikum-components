@@ -9,7 +9,7 @@ Add to your package.json like so:
     npm install -D KUMteamIM/lmu-klinikum-components
     yarn add -D KUMteamIM/lmu-klinikum-components
 
-We have three JSX components available for use
+These are the JSX components available for use
 
 ```html
 import CommonNavbar from "lmu-klinikum-components";
@@ -17,9 +17,12 @@ import CommonNavbar from "lmu-klinikum-components";
 <CommonNavbar />
 <CommonNavbarGrey />
 <CommonFooter />
+<CommonCookieNotice />
 ```
 
-See example implementation and available properties for the components inside `App.tsx`.
+For details on these see the wiki at https://github.com/KUMteamIM/lmu-klinikum-components/wiki/Available-Components
+
+Some example implementation and available properties for the components can also be found inside `App.tsx`.
 
 ## Development
 
