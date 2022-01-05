@@ -9,7 +9,7 @@ Add to your package.json like so:
     npm install -D KUMteamIM/lmu-klinikum-components
     yarn add -D KUMteamIM/lmu-klinikum-components
 
-We have three JSX components available for use
+These are the JSX components available for use
 
 ```html
 import CommonNavbar from "lmu-klinikum-components";
