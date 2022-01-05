@@ -16,12 +16,12 @@ const DEFAULT_CONFIG = {
 const CommonCookieNotice = ({ config, expires }) => {
   const { notice, accept, url, url_label } = config;
   const [accepted, setAccepted] = useState(
-    document.cookie.includes("acceptedCookies")
+    document.cookie.includes("acceptedCookies=yes")
   );
 
   const onAccept = () => {
     setAccepted(true);
-    document.cookie = `acceptedCookies=true;expires=${expires.toUTCString()}`;
+    document.cookie = `acceptedCookies=yes;expires=${expires.toUTCString()}`;
   };
 
   if (accepted) return null;
@@ -33,7 +33,7 @@ const CommonCookieNotice = ({ config, expires }) => {
       </div>
       {url && url_label && (
         <div style={{ flex: 2 }}>
-          <a href={url} target="_blank">
+          <a href={url} target="_blank" rel="noreferrer">
             ➜ {url_label}
           </a>
         </div>
