@@ -1,6 +1,6 @@
 {
   "name": "lmu-klinikum-components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "lmu-styles": "KUMteamIM/lmu-styles",
