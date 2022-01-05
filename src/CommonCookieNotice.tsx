@@ -9,11 +9,23 @@ const DEFAULT_CONFIG = {
   url_label: "Ausführliche Hinweise zu Cookies",
 };
 
+interface DefaultConfig {
+  notice: string,
+  accept: string,
+  url?: string,
+  url_label?: string
+}
+
+interface PropDefs {
+  config: DefaultConfig,
+  expires: Date,
+}
+
 /**
  * Include a Cookie Notice banner in your page
  * @param {config} | object with notice, accept, url*, url_label* (*=optional)
  */
-const CommonCookieNotice = ({ config, expires }) => {
+const CommonCookieNotice = ({ config, expires }:PropDefs) => {
   const { notice, accept, url, url_label } = config;
   const [accepted, setAccepted] = useState(
     document.cookie.includes("acceptedCookies=yes")
