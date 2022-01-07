@@ -10,8 +10,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "compile": "tsc src/*.jsx --jsx preserve -t es2020 --outDir dist --noEmit false"
+    "compile:jsx": "tsc ./src/Common*.tsx --jsx preserve --outDir dist --esModuleInterop true",
+    "version": "yarn run compile:jsx && git add -A dist",
+    "postversion": "git push && git push --tags"
   },
   "eslintConfig": {
     "extends": [
