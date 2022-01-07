@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./cookie-notice.css";
 
 const DEFAULT_CONFIG = {
   notice:
@@ -40,17 +39,17 @@ const CommonCookieNotice = ({ config, expires }:PropDefs) => {
 
   return (
     <div className="cookie-notice">
-      <div style={{ flex: 4 }}>
+      <div>
         <i>{notice}</i>
       </div>
       {url && url_label && (
-        <div style={{ flex: 2 }}>
+        <div>
           <a href={url} target="_blank" rel="noreferrer">
             ➜ {url_label}
           </a>
         </div>
       )}
-      <div style={{ flex: 1 }}>
+      <div>
         <button className="button-lg" onClick={onAccept}>
           {accept}
         </button>

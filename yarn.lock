@@ -7002,8 +7002,8 @@ lines-and-columns@^1.1.6:
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
 lmu-styles@KUMteamIM/lmu-styles:
-  version "1.0.0"
-  resolved "https://codeload.github.com/KUMteamIM/lmu-styles/tar.gz/2ab41e13dc088a539a562cc41e0464ae32a65804"
+  version "0.1.5"
+  resolved "https://codeload.github.com/KUMteamIM/lmu-styles/tar.gz/fd04d075fc720dd5f302d8f9e87fdd834e08479f"
 
 load-json-file@^2.0.0:
   version "2.0.0"
@@ -10891,7 +10891,7 @@ typedarray@^0.0.6:
 
 typescript@^4.5.4:
   version "4.5.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-4.5.4.tgz"
   integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
 
 uncontrollable@^7.2.1:
