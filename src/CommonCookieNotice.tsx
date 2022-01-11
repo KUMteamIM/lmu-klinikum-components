@@ -1,5 +1,4 @@
-import { useState } from "react";
-import "./cookie-notice.css";
+import React, { useState } from "react";
 
 const DEFAULT_CONFIG = {
   notice:
@@ -9,11 +8,23 @@ const DEFAULT_CONFIG = {
   url_label: "Ausführliche Hinweise zu Cookies",
 };
 
+interface DefaultConfig {
+  notice: string,
+  accept: string,
+  url?: string,
+  url_label?: string
+}
+
+interface PropDefs {
+  config: DefaultConfig,
+  expires: Date,
+}
+
 /**
  * Include a Cookie Notice banner in your page
  * @param {config} | object with notice, accept, url*, url_label* (*=optional)
  */
-const CommonCookieNotice = ({ config, expires }) => {
+const CommonCookieNotice = ({ config, expires }:PropDefs) => {
   const { notice, accept, url, url_label } = config;
   const [accepted, setAccepted] = useState(
     document.cookie.includes("acceptedCookies=yes")
@@ -28,17 +39,17 @@ const CommonCookieNotice = ({ config, expires }) => {
 
   return (
     <div className="cookie-notice">
-      <div style={{ flex: 4 }}>
+      <div>
         <i>{notice}</i>
       </div>
       {url && url_label && (
-        <div style={{ flex: 2 }}>
+        <div>
           <a href={url} target="_blank" rel="noreferrer">
             ➜ {url_label}
           </a>
         </div>
       )}
-      <div style={{ flex: 1 }}>
+      <div>
         <button className="button-lg" onClick={onAccept}>
           {accept}
         </button>

@@ -1,16 +1,18 @@
 {
-  "name": "lmu-klinikum-components",
+  "name": "@lmu-med/ci-components",
   "version": "0.1.2",
   "dependencies": {
-    "lmu-styles": "KUMteamIM/lmu-styles",
+    "@lmu-med/styles": "^0.1.5",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.3",
     "react-dom": "^17.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "compile": "tsc src/*.jsx --jsx preserve -t es2020 --outDir dist --noEmit false"
+    "compile:jsx": "tsc ./src/Common*.tsx --jsx preserve --outDir dist --esModuleInterop true",
+    "compile:js": "tsc ./src/Common*.tsx --jsx react --outDir dist --esModuleInterop true",
+    "version": "yarn run compile:jsx && git add -A dist",
+    "postversion": "git push && git push --tags"
   },
   "eslintConfig": {
     "extends": [
@@ -39,9 +41,12 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "bootstrap": "5.1.3",
-    "tsc": "^2.0.3",
     "react-scripts": "4.0.3",
+    "tsc": "^2.0.3",
     "typescript": "^4.5.4",
     "web-vitals": "^1.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
