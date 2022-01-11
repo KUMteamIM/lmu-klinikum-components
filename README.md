@@ -6,13 +6,14 @@ React component library for shared html elements in LMU Klinikum CI.
 
 Add to your package.json like so:
 
-    npm install -D KUMteamIM/lmu-klinikum-components
-    yarn add -D KUMteamIM/lmu-klinikum-components
+```
+    npm install -d @lmu-med/ci-components
+```
 
-These are the JSX components available for use
+### JSX components available for immediate use
 
 ```html
-import CommonNavbar from "lmu-klinikum-components";
+import CommonNavbar from "@lmu-med/ci-components";
 
 <CommonNavbar />
 <CommonNavbarGrey />
@@ -20,7 +21,7 @@ import CommonNavbar from "lmu-klinikum-components";
 <CommonCookieNotice />
 ```
 
-For details on these see the wiki at https://github.com/KUMteamIM/lmu-klinikum-components/wiki/Available-Components
+For details on these see [the wiki](https://github.com/KUMteamIM/lmu-klinikum-components/wiki/Available-Components).
 
 Some example implementation and available properties for the components can also be found inside `App.tsx`.
 
@@ -38,31 +39,24 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `yarn build`
+## Building
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To compile the tsx sources into jsx files into the `dist` folder, run
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+yarn run compile
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Releasing
 
-### `yarn eject`
+To create a new release, run either of these commands, depending on the gravity of the release:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+yarn version patch
+yarn version minor
+yarn version major
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The version command runs the `compile` script once, commits the newly created files and pushes the code and the new tag to the origin server.
