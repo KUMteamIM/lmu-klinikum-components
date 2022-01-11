@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "compile:jsx": "tsc ./src/Common*.tsx --jsx preserve --outDir dist --esModuleInterop true",
+    "compile:jsx": "tsc ./src/Common*.tsx --jsx preserve --outDir dist --esModuleInterop true --declaration true",
     "compile:js": "tsc ./src/Common*.tsx --jsx react --outDir dist --esModuleInterop true",
     "version": "yarn run compile:jsx && git add -A dist",
     "postversion": "git push && git push --tags"
