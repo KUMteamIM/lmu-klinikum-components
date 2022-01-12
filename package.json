@@ -12,9 +12,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
-    "compile:jsx": "tsc ./src/lib/components/Common*.tsx --jsx preserve --outDir dist/components --esModuleInterop true --declaration true --emitDeclarationOnly true --isolatedModules true",
+    "compile:jsx": "tsc ./src/lib/components/Common*.tsx --jsx preserve --outDir dist/components --esModuleInterop true --declaration true --isolatedModules true",
     "compile:js": "tsc ./src/lib/Common*.tsx --jsx react --outDir jsx --esModuleInterop true --declaration true",
-    "version": "yarn run compile:jsx && git add -A dist",
+    "version": "yarn run build && yarn run compile:jsx && git add -A dist",
     "postversion": "git push && git push --tags"
   },
   "eslintConfig": {

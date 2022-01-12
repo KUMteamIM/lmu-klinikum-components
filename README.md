@@ -43,10 +43,11 @@ Launches the test runner in the interactive watch mode.
 
 ## Building
 
-To compile the tsx sources into jsx files into the `dist` folder, run
+To compile the tsx sources into jsx files with declarations into the `dist/lib` folder, run
 
 ```
-yarn run compile
+yarn run build
+yarn run compile:jsx
 ```
 
 ## Releasing
