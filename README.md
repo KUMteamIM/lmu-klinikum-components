@@ -29,7 +29,7 @@ Some example implementation and available properties for the components can also
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -37,7 +37,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm test`
 
 Launches the test runner in the interactive watch mode.
 
@@ -46,8 +46,8 @@ Launches the test runner in the interactive watch mode.
 To compile the tsx sources into jsx files with declarations into the `dist/lib` folder, run
 
 ```
-yarn run build
-yarn run compile:jsx
+npm run build
+npm run compile:jsx
 ```
 
 ## Releasing
@@ -55,9 +55,9 @@ yarn run compile:jsx
 To create a new release, run either of these commands, depending on the gravity of the release:
 
 ```
-yarn version patch
-yarn version minor
-yarn version major
+npm version patch
+npm version minor
+npm version major
 ```
 
 The version command runs the `compile` script once, commits the newly created files and pushes the code and the new tag to the origin server.
