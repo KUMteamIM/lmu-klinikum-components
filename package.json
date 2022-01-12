@@ -1,6 +1,6 @@
 {
   "name": "@lmu-med/ci-components",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "typings": "dist/components",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
