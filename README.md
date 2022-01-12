@@ -61,3 +61,17 @@ npm version major
 ```
 
 The version command runs the `compile` script once, commits the newly created files and pushes the code and the new tag to the origin server.
+
+## Publishing
+
+To publish a new release, login as user `lmu-med-wad` with this command:
+
+    npm login
+
+Finally, to publish the new package to NPM, run this:
+
+    npm publish
+
+## Contributing
+
+Feel free to fork, post issues etc. to this repository.
