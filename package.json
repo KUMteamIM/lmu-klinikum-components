@@ -1,7 +1,9 @@
 {
   "name": "@lmu-med/ci-components",
   "version": "0.1.4",
+  "typings": "dist/components",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@lmu-med/styles": "^0.1.5",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.3",
@@ -9,8 +11,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "compile:jsx": "tsc ./src/Common*.tsx --jsx preserve --outDir dist --esModuleInterop true --declaration true",
-    "compile:js": "tsc ./src/Common*.tsx --jsx react --outDir dist --esModuleInterop true",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "compile:jsx": "tsc ./src/lib/components/Common*.tsx --jsx preserve --outDir dist/components --esModuleInterop true --declaration true --emitDeclarationOnly true --isolatedModules true",
+    "compile:js": "tsc ./src/lib/Common*.tsx --jsx react --outDir jsx --esModuleInterop true --declaration true",
     "version": "yarn run compile:jsx && git add -A dist",
     "postversion": "git push && git push --tags"
   },
@@ -33,6 +36,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-typescript": "^7.16.7",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
