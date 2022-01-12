@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "lmu-styles/dist/lmu.css";
-import CommonNavbar from "./CommonNavbar";
+import "@lmu-med/styles/dist/lmu.css";
+import CommonNavbar from "./lib/components/CommonNavbar";
 import Nav from "react-bootstrap/Nav";
 import { Container } from "react-bootstrap";
-import CommonFooter from "./CommonFooter";
-import CommonNavbarGrey from "./CommonNavbarGrey";
-import CommonCookieNotice from "./CommonCookieNotice";
+import CommonFooter from "./lib/components/CommonFooter";
+import CommonNavbarGrey from "./lib/components/CommonNavbarGrey";
+import CommonCookieNotice from "./lib/components/CommonCookieNotice";
 
 function App() {
   return (
