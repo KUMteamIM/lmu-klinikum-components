@@ -1,6 +1,13 @@
 {
   "name": "@lmu-med/ci-components",
   "version": "0.1.5",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [ "dist", "README.md" ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KUMteamIM/lmu-klinikum-components.git"
+  },
   "typings": "dist/components",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
