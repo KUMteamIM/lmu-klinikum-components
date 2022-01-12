@@ -10,17 +10,17 @@ var Col_1 = __importDefault(require("react-bootstrap/Col"));
 var Container_1 = __importDefault(require("react-bootstrap/Container"));
 /**
  * Creates a standard footer element
- * @param firstRow | contents for the left row, defaults to LMU Klinikum address
- * @param secondRow | contents for the middle row, defaults to empty
- * @param thirdRow | contents for the right row, defaults to imprint, privacy policy, newsletter
+ * @param firstCol | contents for the left column, defaults to LMU Klinikum address
+ * @param secondCol | contents for the middle column, defaults to empty
+ * @param thirdCol | contents for the right column, defaults to imprint, privacy policy, newsletter
  */
 function CommonFooter(_a) {
-    var firstRow = _a.firstRow, secondRow = _a.secondRow, thirdRow = _a.thirdRow;
+    var firstCol = _a.firstCol, secondCol = _a.secondCol, thirdCol = _a.thirdCol;
     return (<footer>
       <Container_1.default>
         <Row_1.default>
           <Col_1.default>
-            {firstRow || (<span>
+            {firstCol || (<span>
                 <h4>LMU Klinikum</h4>
                 <p>
                   Marchioninistr. 15
@@ -35,9 +35,9 @@ function CommonFooter(_a) {
                 <i className="fas fa-phone"></i> <span>089 4400 - 0</span>
               </span>)}
           </Col_1.default>
-          <Col_1.default>{secondRow}</Col_1.default>
+          <Col_1.default>{secondCol}</Col_1.default>
           <Col_1.default>
-            {thirdRow || (<react_1["default"].Fragment>
+            {thirdCol || (<react_1["default"].Fragment>
                 <ul>
                   <li>
                     <a href="https://www.lmu-klinikum.de/imprint?homepage=4c9dc47213c27567">

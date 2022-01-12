@@ -5,23 +5,23 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
 interface PropDefs {
-  firstRow?: object;
-  secondRow?: object;
-  thirdRow?: object;
+  firstCol?: object;
+  secondCol?: object;
+  thirdCol?: object;
 }
 /**
  * Creates a standard footer element
- * @param firstRow | contents for the left row, defaults to LMU Klinikum address
- * @param secondRow | contents for the middle row, defaults to empty
- * @param thirdRow | contents for the right row, defaults to imprint, privacy policy, newsletter
+ * @param firstCol | contents for the left column, defaults to LMU Klinikum address
+ * @param secondCol | contents for the middle column, defaults to empty
+ * @param thirdCol | contents for the right column, defaults to imprint, privacy policy, newsletter
  */
-function CommonFooter({ firstRow, secondRow, thirdRow }: PropDefs) {
+function CommonFooter({ firstCol, secondCol, thirdCol }: PropDefs) {
   return (
     <footer>
       <Container>
         <Row>
           <Col>
-            {firstRow || (
+            {firstCol || (
               <span>
                 <h4>LMU Klinikum</h4>
                 <p>
@@ -38,9 +38,9 @@ function CommonFooter({ firstRow, secondRow, thirdRow }: PropDefs) {
               </span>
             )}
           </Col>
-          <Col>{secondRow}</Col>
+          <Col>{secondCol}</Col>
           <Col>
-            {thirdRow || (
+            {thirdCol || (
               <React.Fragment>
                 <ul>
                   <li>
