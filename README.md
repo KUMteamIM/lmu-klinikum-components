@@ -13,7 +13,7 @@ Add to your package.json like so:
 ### JSX components available for immediate use
 
 ```html
-import CommonNavbar from "@lmu-med/ci-components";
+import { CommonNavbar } from "@lmu-med/ci-components";
 
 <CommonNavbar />
 <CommonNavbarGrey />
