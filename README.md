@@ -4,10 +4,10 @@ React component library for shared html elements in LMU Klinikum CI.
 
 ## Usage
 
-Add to your package.json like so:
+Add to your package.json like so and include bootstrap:
 
 ```
-    npm install -d @lmu-med/ci-components
+    npm install -d @lmu-med/ci-components bootstrap
 ```
 
 ### JSX components available for immediate use
