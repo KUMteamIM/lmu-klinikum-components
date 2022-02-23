@@ -25,6 +25,10 @@ For details on these see [the wiki](https://github.com/KUMteamIM/lmu-klinikum-co
 
 Some example implementation and available properties for the components can also be found inside `App.tsx`.
 
+### Favicons
+
+The CI components come with a set of favicons for immediate use on your project. For info on how to implement, head over to [the favicon implementation guide](https://github.com/KUMteamIM/lmu-klinikum-components/wiki/Favicons) in the wiki.
+
 ## Development
 
 In the project directory, you can run:
