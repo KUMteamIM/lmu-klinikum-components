@@ -4,6 +4,7 @@ interface DefaultConfig {
     accept: string;
     url?: string;
     url_label?: string;
+    title?: string;
 }
 interface PropDefs {
     config: DefaultConfig;
@@ -17,11 +18,13 @@ declare const CommonCookieNotice: {
     ({ config, expires }: PropDefs): JSX.Element;
     defaultProps: {
         config: {
+            title: string;
             notice: string;
             accept: string;
             url: string;
             url_label: string;
         };
+        title: string;
         expires: Date;
     };
 };
