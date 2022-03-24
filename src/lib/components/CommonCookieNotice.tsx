@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 const DEFAULT_CONFIG = {
+  title: 'Wir verwenden Cookies',
   notice:
     "Zur Verbesserung der Funktion unserer Seite verwenden wir Cookies. Bitte beachten Sie, dass mit deaktivierten Cookies einige Dienste nicht mehr funktionieren (z.B. Formulare absenden).",
-  accept: "OK",
+  accept: "Cookies akzeptieren",
   url: "https://www.lmu-klinikum.de/cookies/41fa08aa421f0f09",
   url_label: "Ausführliche Hinweise zu Cookies",
 };
@@ -12,7 +13,8 @@ interface DefaultConfig {
   notice: string,
   accept: string,
   url?: string,
-  url_label?: string
+  url_label?: string,
+  title?: string
 }
 
 interface PropDefs {
@@ -25,7 +27,7 @@ interface PropDefs {
  * @param {config} | object with notice, accept, url*, url_label* (*=optional)
  */
 const CommonCookieNotice = ({ config, expires }:PropDefs) => {
-  const { notice, accept, url, url_label } = config;
+  const { notice, accept, url, url_label, title } = config;
   const [accepted, setAccepted] = useState(
     document.cookie.includes("acceptedCookies=yes")
   );
@@ -39,20 +41,26 @@ const CommonCookieNotice = ({ config, expires }:PropDefs) => {
 
   return (
     <div className="cookie-notice">
-      <div>
-        <i>{notice}</i>
-      </div>
-      {url && url_label && (
+      <div className="cookie-notice-content">
         <div>
-          <a href={url} target="_blank" rel="noreferrer">
-            ➜ {url_label}
-          </a>
+          { title && (<h3>{title}</h3>)}
+          <p>
+          <i>{notice}</i>
+          </p>
         </div>
-      )}
-      <div>
-        <button className="button-lg" onClick={onAccept}>
-          {accept}
-        </button>
+        <div>
+          <button className="button-lg" onClick={onAccept}>
+            {accept}
+          </button>
+        </div>
+
+        {url && url_label && (
+          <div>
+            <a href={url} target="_blank" rel="noreferrer">
+              ➜ {url_label}
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -60,6 +68,7 @@ const CommonCookieNotice = ({ config, expires }:PropDefs) => {
 
 CommonCookieNotice.defaultProps = {
   config: DEFAULT_CONFIG,
+  title: '',
   expires: new Date(Date.now() + 1000 * 3600 * 365),
 };
 
