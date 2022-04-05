@@ -24,5 +24,7 @@
     "src/CommonFooter.tsx",
     "src/CommonNavbarGrey.tsx",
     "src/CommonNavbar.tsx",
+    "src/CommonCookieNotice.tsx",
+    "src/CommonSpinner.tsx",
   ]
 }

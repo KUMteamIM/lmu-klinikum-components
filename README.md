@@ -19,6 +19,7 @@ import { CommonNavbar } from "@lmu-med/ci-components";
 <CommonNavbarGrey />
 <CommonFooter />
 <CommonCookieNotice />
+<CommonSpinner />
 ```
 
 For details on these see [the wiki](https://github.com/KUMteamIM/lmu-klinikum-components/wiki/Available-Components).

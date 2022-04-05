@@ -7,6 +7,7 @@ import { Container } from "react-bootstrap";
 import CommonFooter from "./lib/components/CommonFooter";
 import CommonNavbarGrey from "./lib/components/CommonNavbarGrey";
 import CommonCookieNotice from "./lib/components/CommonCookieNotice";
+import CommonSpinner from "./lib/components/CommonSpinner";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <p>Der Absatz des Textes.</p>
         </Container>
       </article>
+      <CommonSpinner />
       <CommonFooter />
       <CommonCookieNotice expires={new Date()} />
     </div>
