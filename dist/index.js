@@ -27,13 +27,8 @@ Object.defineProperty(exports, "CommonNavbarGrey", {
     return _CommonNavbarGrey.default;
   }
 });
-
 var _CommonNavbarGrey = _interopRequireDefault(require("./components/CommonNavbarGrey"));
-
 var _CommonNavbar = _interopRequireDefault(require("./components/CommonNavbar"));
-
 var _CommonFooter = _interopRequireDefault(require("./components/CommonFooter"));
-
 var _CommonCookieNotice = _interopRequireDefault(require("./components/CommonCookieNotice"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

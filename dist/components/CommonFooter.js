@@ -4,19 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
 require("bootstrap/dist/css/bootstrap.min.css");
-
 var _react = _interopRequireDefault(require("react"));
-
 var _Row = _interopRequireDefault(require("react-bootstrap/Row"));
-
 var _Col = _interopRequireDefault(require("react-bootstrap/Col"));
-
 var _Container = _interopRequireDefault(require("react-bootstrap/Container"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 /**
  * Creates a standard footer element
  * @param firstCol | contents for the left column, defaults to LMU Klinikum address
@@ -37,6 +30,5 @@ function CommonFooter(_ref) {
     href: "https://www.lmu-klinikum.de/data_safety"
   }, "Datenschutz"))))))));
 }
-
 var _default = CommonFooter;
 exports.default = _default;

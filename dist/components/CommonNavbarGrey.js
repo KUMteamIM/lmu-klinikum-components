@@ -4,17 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
 var _react = _interopRequireDefault(require("react"));
-
 require("bootstrap/dist/css/bootstrap.min.css");
-
 var _Container = _interopRequireDefault(require("react-bootstrap/Container"));
-
 var _Navbar = _interopRequireDefault(require("react-bootstrap/Navbar"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function CommonNavbarGrey(_ref) {
   let {
     children
@@ -28,6 +22,5 @@ function CommonNavbarGrey(_ref) {
     id: "grey-navbar-nav"
   }, children)));
 }
-
 var _default = CommonNavbarGrey;
 exports.default = _default;
