@@ -26,8 +26,13 @@ function App() {
           <h2>Die Kopfzeile des Abschnittes</h2>
           <p>Der Absatz des Textes.</p>
         </Container>
+        <Container>
+          <h3>
+            CommonSpinner
+          </h3>
+          <CommonSpinner />
+        </Container>
       </article>
-      <CommonSpinner />
       <CommonFooter />
       <CommonCookieNotice expires={new Date()} />
     </div>
